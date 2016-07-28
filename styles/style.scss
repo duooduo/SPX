@@ -3,8 +3,7 @@
 $border: 1px solid #fcfcfc;
 
 // -- public
-body { max-width: 750px;}
-.p_wrap { position: relative;}
+.p_wrap { position: relative; max-width: 750px; margin: 0 auto;}
 .p_topAd { width: 100%; height: rem(120);
 	.p_adImg { position: fixed; left: 0; top: 0; right: 0; display: block; width: 100%;}
 }
