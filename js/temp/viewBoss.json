@@ -12,24 +12,37 @@
 		"shopType": "餐厅",
 		"shopScale": "0-20人",
 		"shopName": "一个店铺",
-		"shopLocationName": "惠新西街南口",
-		"shopDescription": "这是一个店铺哇啦啦啦啦",
+		"shopLocationName": "惠新西街南口向北1000米",
+		"shopDescription": "这是一个店铺哇啦啦啦啦特别好喝哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
 		"shopImg":[
 			"images/p-topAd.png",
 			"images/p-topAd.png",
 			"images/p-topAd.png"
 		],
-		"jobs": {
-			"jobId": 123123,
-			"name": "快递员",
-			"salaryMin": 1000,
-			"salaryMax": 3000,
-			"salaryUnit": "月",
-			"education": "高中",
-			"ageMin": 23,
-			"ageMax": 34,
-			"workYears": "3年"
-		}
+		"jobs": [
+			{
+				"jobId": 123123,
+				"name": "快递员",
+				"salaryMin": 1000,
+				"salaryMax": 3000,
+				"salaryUnit": "月",
+				"education": "高中",
+				"ageMin": 23,
+				"ageMax": 34,
+				"workYears": "3年"
+			},
+			{
+				"jobId": 123123,
+				"name": "大厨",
+				"salaryMin": 7000,
+				"salaryMax": 8000,
+				"salaryUnit": "天",
+				"education": "大专",
+				"ageMin": 23,
+				"ageMax": 34,
+				"workYears": "10年"
+			}
+		]
 	},
 	"success":true
 }
