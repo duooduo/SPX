@@ -1,0 +1,12 @@
+{
+	"status":"1001",
+	"message":"",
+	"data":{
+		"icon":"http://139.129.206.161/dev/img/default.png",
+		"sex":"男",
+		"age":"16岁",
+		"userId":12,
+		"realName":"小二1368"
+	},
+	"success":true
+}

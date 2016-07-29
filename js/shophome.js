@@ -1,6 +1,5 @@
 'use strict';
-
-$(function () {
+!(function () {
 	var id = getQueryStringArgs().id;
 
 	var postJson = {
@@ -16,7 +15,8 @@ $(function () {
 		data: JSON.stringify(postJson),
 		success: function (d) {
 			console.log(d);
-			if(d.code == 1001){
+			if(d.status == 1001){
+				// todo
 
 			}
 		},
@@ -24,4 +24,4 @@ $(function () {
 			console.log(e);
 		}
 	});
-});
+})();
