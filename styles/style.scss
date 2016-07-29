@@ -21,7 +21,8 @@ $border: 1px solid #fcfcfc;
 .p_tip { padding-top: rem(18);
 	span { display: inline-block; padding: 0 rem(8) 0 rem(35); position: relative; margin-right: rem(9); border: 1px solid #ffc65a; border-radius: rem(3); line-height: rem(26); font-size: rem(18); @extend %color_7;
 		&:before { content: ''; position: absolute; left: 0; top: 0; display: block; width: rem(26); height: rem(26); background-color: #ffc65a; @extend %icons; }
-		&.age:before { background-position: 0 0;}
+		&.age1:before { background-position: 0 0;}
+		&.age2:before { background-position: 0 0;}
 		&.yer:before { background-position: rem(-30) 0;}
 		&.mrk:before { background-position: rem(-60) 0;}
 		&.edu:before { background-position: rem(-90) 0;}
@@ -69,13 +70,20 @@ $border: 1px solid #fcfcfc;
 }
 
 // -- labor
-.labor_header { padding: rem(22) 0;
+.labor_header { padding: rem(22) 0; position: relative;
 	figure { margin: 0 auto; width: rem(120); height: rem(120); border: 1px solid #ececec; border-radius: 50%; overflow: hidden;
 		img { display: block; width: 100%; height: 100%;}
 	}
-	.p_tip { text-align: center; padding-top: rem(16)}
+	.p_tip { text-align: center; padding-top: 0;}
+	.labor_telBtn { position: absolute; left: rem(50); top: 50%; display: block; width: rem(70); height: rem(70); margin-top: rem(-35); background: url("../images/telBtn.png") no-repeat 0 0; background-size: 100% 100%;}
+	.labor_msgBtn { position: absolute; right: rem(50); top: 50%; margin-top: rem(-35); display: block; width: rem(70); height: rem(70); background: url("../images/msgBtn.png") no-repeat 0 0; background-size: 100% 100%;}
 }
 .labor_name { padding: rem(16) rem(20); text-align: center; line-height: rem(32); font-size: rem(22); @extend %color_5;
 	em { padding: 0 rem(10); font-size: rem(28); color: #252525;}
 	span { padding: 0 rem(10);}
+}
+.labor_list01 { padding-left: rem(30);
+	li { padding: rem(10) 0; border-bottom: 1px solid #ededed;
+		&:last-of-type { border-bottom: 0;}
+	}
 }
