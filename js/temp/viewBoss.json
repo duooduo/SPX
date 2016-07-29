@@ -2,11 +2,34 @@
 	"status":"1001",
 	"message":"",
 	"data":{
-		"icon":"http://139.129.206.161/dev/img/default.png",
-		"sex":"男",
-		"age":"16岁",
 		"userId":12,
-		"realName":"小二1368"
+		"realName":"小二1368",
+		"sex":"男",
+		"icon":"http://139.129.206.161/dev/img/default.png",
+		"age":"16岁",
+		"position": "老板",
+		"shopId": 456,
+		"shopType": "餐厅",
+		"shopScale": "0-20人",
+		"shopName": "一个店铺",
+		"shopLocationName": "惠新西街南口",
+		"shopDescription": "这是一个店铺哇啦啦啦啦",
+		"shopImg":[
+			"images/p-topAd.png",
+			"images/p-topAd.png",
+			"images/p-topAd.png"
+		],
+		"jobs": {
+			"jobId": 123123,
+			"name": "快递员",
+			"salaryMin": 1000,
+			"salaryMax": 3000,
+			"salaryUnit": "月",
+			"education": "高中",
+			"ageMin": 23,
+			"ageMax": 34,
+			"workYears": "3年"
+		}
 	},
 	"success":true
 }
