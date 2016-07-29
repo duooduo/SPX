@@ -150,3 +150,9 @@ $border: 1px solid #fcfcfc;
 }
 .job_shopTxt { line-height: rem(40); font-size: rem(28); word-break: break-all;}
 
+// -- rule
+.rule_wrap { padding: 20px; line-height: 28px;
+	.rule_tit { padding: 0 0 10px 0; text-align: center; font-size: 18px; color: #252525;}
+	p { font-size: 16px; @extend %color_5; word-break: break-all;}
+	h2 { font-size: 16px; @extend %color_7; padding: 10px 0 5px;}
+}
