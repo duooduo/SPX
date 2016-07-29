@@ -1,19 +1,32 @@
 @charset "utf-8";
 @import "base";
 $border: 1px solid #fcfcfc;
-%color_1 { color: rgba(37,37,37,.7);}
+%color_3 { color: rgba(37,37,37,.3);}
+%color_5 { color: rgba(37,37,37,.5);}
+%color_7 { color: rgba(37,37,37,.7);}
 %icons { background-image: url("../images/icons.png"); background-size: rem(200) rem(200);}
 
 // -- public
-.p_wrap { position: relative; max-width: 720px; margin: 0 auto;}
-.p_topAd { width: 100%; height: rem(120);
+.p_wrap { position: relative; max-width: 720px; margin: 0 auto; padding-bottom: rem(100); z-index: 1;}
+.p_topAd { position: relative; width: 100%; height: rem(120); z-index: 10;
 	.p_adImg { position: fixed; left: 0; top: 0; right: 0; display: block; width: 100%;}
 }
-.p_bottomAd {
-	position: fixed; left: 0;  right: 0; bottom: 0;
+.p_bottomAd { position: fixed; left: 0; right: 0; bottom: 0; z-index: 9;
 	a { display: block; width: 100%; height: rem(96); line-height: rem(96); text-align: center; background: #ffc65a; color: #fff; font-size: rem(36);}
 }
 .p_box01 { background: #fff; border-top: $border; border-bottom: $border; margin-bottom: 10px;}
+.p_tit01 { padding: rem(10) rem(20); font-size: rem(28); height: rem(46); line-height: rem(46); position: relative; overflow: hidden; word-break: break-all;
+	&:before { content: ''; position: absolute; left: 0; top: 50%; display: block; width: rem(6); height: rem(28); margin-top: rem(-15); background: #ffc65a;}
+}
+.p_tip { padding-top: rem(18);
+	span { display: inline-block; padding: 0 rem(8) 0 rem(35); position: relative; margin-right: rem(9); border: 1px solid #ffc65a; border-radius: rem(3); line-height: rem(26); font-size: rem(18); @extend %color_7;
+		&:before { content: ''; position: absolute; left: 0; top: 0; display: block; width: rem(26); height: rem(26); background-color: #ffc65a; @extend %icons; }
+		&.age:before { background-position: 0 0;}
+		&.yer:before { background-position: rem(-30) 0;}
+		&.mrk:before { background-position: rem(-60) 0;}
+		&.edu:before { background-position: rem(-90) 0;}
+	}
+}
 
 // -- shop home
 .shop_header { padding-left: rem(30); font-size: 0; overflow: hidden;
@@ -27,15 +40,42 @@ $border: 1px solid #fcfcfc;
 			&:last-of-type { padding-right: 0;}
 		}
 	}
-	.shop_header_tip { padding-top: rem(18);
-		span { display: inline-block; padding: 0 rem(8) 0 rem(35); position: relative; margin-right: rem(9); border: 1px solid #ffc65a; border-radius: rem(3); line-height: rem(26); font-size: rem(18); @extend %color_1;
-			&:before { content: ''; position: absolute; left: 0; top: 0; display: block; width: rem(26); height: rem(26); background-color: #ffc65a; @extend %icons; }
-			&.age:before { background-position: 0 0;}
-			&.yer:before { background-position: rem(-30) 0;}
-			&.mrk:before { background-position: rem(-60) 0;}
-			&.edu:before { background-position: rem(-90) 0;}
+	.shop_header_site { padding-top: rem(14); height: rem(40); line-height: rem(40); font-size: rem(28); @extend %color_7;}
+}
+.shop_list01 { padding-left: rem(30);
+	li { padding: rem(10) 0; border-bottom: 1px solid #ededed;
+		&:last-of-type { border-bottom: 0;}
+	}
+}
+.shop_address { position: relative; padding: 0 rem(40); height: rem(40); line-height: rem(40); font-size: rem(22); @extend %color_3; word-break: break-all;
+	&:before { content: ''; position: absolute; left: rem(14); top: rem(6); display: block; width: rem(26); height: rem(26); @extend %icons; background-position: 0 rem(-30);}
+}
+.shop_intro { padding: 0 rem(40) 0 rem(20); line-height: rem(40); font-size: rem(22); @extend %color_7; word-break: break-all;}
 
+.shop_jobList {
+	li { overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 rem(40) 0 rem(20); height: rem(58); line-height: rem(58); width: 100%; font-size: rem(24); border: 0;
+		.fl { color: #252525;}
+		.fr { color: #ff4452;}
+		a { display: block; overflow: hidden; padding-right: rem(40); position: relative; word-break: break-all;
+			&:after { content: ''; position: absolute; right: 0; top: rem(12); display: block; width: rem(16); height: rem(35); @extend %icons; background-position: rem(-120) 0;}
 		}
 	}
-	.shop_header_site { padding-top: rem(14); height: rem(40); line-height: rem(40); font-size: rem(28); @extend %color_1;}
+}
+.shop_imgBox { padding: 0 rem(40) rem(20) rem(50); font-size: 0; overflow: hidden;
+	li { display: inline-block; width: 25%; height: 0; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 25% 0 0 0; position: relative;
+		.shop_img { position: absolute; left: 0; right: 5px; top: 0; bottom: 5px;}
+		img { display: block; width: 100%; height: 100%;}
+	}
+}
+
+// -- labor
+.labor_header { padding: rem(22) 0;
+	figure { margin: 0 auto; width: rem(120); height: rem(120); border: 1px solid #ececec; border-radius: 50%; overflow: hidden;
+		img { display: block; width: 100%; height: 100%;}
+	}
+	.p_tip { text-align: center; padding-top: rem(16)}
+}
+.labor_name { padding: rem(16) rem(20); text-align: center; line-height: rem(32); font-size: rem(22); @extend %color_5;
+	em { padding: 0 rem(10); font-size: rem(28); color: #252525;}
+	span { padding: 0 rem(10);}
 }
