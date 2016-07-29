@@ -2,12 +2,17 @@
 	"status":"1001",
 	"message":"",
 	"data":{
-		"icon":"http://139.129.206.161/dev/img/default.png",
+		"userId":12,
+		"realName":"小二1368",
 		"sex":"男",
-		"salaryMax":"4000",
-		"purpose":"宠物美容,烫染技师,送餐员",
+		"icon":"http://139.129.206.161/dev/img/default.png",
+		"age":"16岁",
+		"workYears":"8年",
+		"workStatus":"在职",
 		"education":"初中",
-		"lookForJobFlag":1,
+		"purpose":"宠物美容,烫染技师,送餐员",
+		"salaryMin":"3000",
+		"salaryMax":"4000",
 		"workHistory":[
 			{
 				"situation":{
@@ -72,14 +77,9 @@
 				"updateTime":1467524108000
 			}
 		],
-		"userId":12,
-		"age":"16岁",
-		"userName":"13000000007",
-		"salaryMin":"3000",
-		"realName":"小二1368",
-		"workStatus":"在职",
 		"specialty":"某676求职亮点",
-		"workYears":"8年"
+		"lookForJobFlag":1,
+		"userName":"13000000007"
 	},
 	"success":true
 }

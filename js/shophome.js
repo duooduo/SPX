@@ -35,7 +35,7 @@
 				$('.shop_address').html(data.shopLocationName); //地址
 				$('.shop_intro').html(data.shopDescription);    //介绍
 
-				if(data.jobs){
+				if(data.jobs && data.jobs != []){
 					var jobsdom = '';
 					for(var i=0; i<data.jobs.length; i++){
 						var index = data.jobs[i];
@@ -47,7 +47,7 @@
 					$('.dataJobs').hide();
 				}
 
-				if(data.shopImg){
+				if(data.shopImg && data.shopImg != []){
 					var imgdom = '';
 					for(var i=0; i<data.shopImg.length; i++){
 						var index = data.shopImg[i];
