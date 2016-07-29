@@ -76,6 +76,8 @@
 				}else {
 					$('.dataSpecialty').hide();
 				}
+
+				toDownload();
 			}
 		},
 		error: function(e){

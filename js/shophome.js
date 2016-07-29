@@ -57,6 +57,7 @@
 				}else {
 					$('.dataShopImg').hide();
 				}
+				toDownload();
 			}
 		},
 		error: function(e){
