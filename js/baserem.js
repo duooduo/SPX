@@ -1,9 +1,10 @@
 'use strict';
 fnResize();
-window.addEventListener("resize", function() {fnResize();}, false);
+var k = null;
+window.addEventListener("resize",function(){
+	clearTimeout(k);
+	k = setTimeout(fnResize,300);
+},false);
 function fnResize(){
-	var docWidth = document.documentElement.clientWidth,
-		body = document.getElementsByTagName('html')[0];
-	// if(docWidth >= 720) docWidth = 720;
-	body.style.fontSize = docWidth / 18 + 'px';
+	document.getElementsByTagName('html')[0].style.fontSize = (document.documentElement.clientWidth) / 18 + 'px';
 }

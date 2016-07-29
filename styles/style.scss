@@ -14,8 +14,12 @@ $border: 1px solid #fcfcfc;
 .p_box01 { background: #fff; border-top: $border; border-bottom: $border; margin-bottom: 10px;}
 
 // -- shop home
-.shop_header { padding-left: rem(30); font-size: 0;
-	figure { display: inline-block; margin: rem(20) rem(16) rem(20) 0; width: rem(160); height: rem(160); border: 1px solid #ececec; border-radius: 50%; overflow: hidden;
+.shop_header { padding-left: rem(30); font-size: 0; overflow: hidden;
+	figure { float: left; margin: rem(20) rem(16) rem(20) 0; width: rem(160); height: rem(160); border: 1px solid #ececec; border-radius: 50%; overflow: hidden;
 		img { display: block; width: 100%; height: 100%;}
 	}
+	.ovh { overflow: hidden;}
+	.shop_header_name {}
+	.shop_header_tip {}
+	.shop_header_site {}
 }
