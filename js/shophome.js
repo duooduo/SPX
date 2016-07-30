@@ -11,8 +11,8 @@
 		type: 'POST',
 		dataType: 'json',
 		// headers: {"Content-type": "application/json;charset=UTF-8"},
-		contentType: 'application/json;charset=UTF-8',
-		data: JSON.stringify(postJson),
+		// contentType: 'application/json;charset=UTF-8',
+		data: postJson,
 		success: function (d) {
 			console.log(d);
 			if(d.status == 1001){
@@ -35,7 +35,7 @@
 				$('.shop_address').html(data.shopLocationName); //地址
 				$('.shop_intro').html(data.shopDescription);    //介绍
 
-				if(data.jobs && data.jobs != []){
+				if(data.jobs && data.jobs.length>0){
 					var jobsdom = '';
 					for(var i=0; i<data.jobs.length; i++){
 						var index = data.jobs[i];
@@ -43,11 +43,11 @@
 					}
 					$('.shop_jobList').html(jobsdom);
 				}else {
-					$('.dataAboutShop').css('border-bottom','none');
-					$('.dataJobs').hide();
+					// $('.dataAboutShop').css('border-bottom','none');
+					$('.dataJobs').remove();
 				}
 
-				if(data.shopImg && data.shopImg != []){
+				if(data.shopImg && data.shopImg.length>0){
 					var imgdom = '';
 					for(var i=0; i<data.shopImg.length; i++){
 						var index = data.shopImg[i];
@@ -55,7 +55,7 @@
 					}
 					$('.shop_imgBox').html(imgdom);
 				}else {
-					$('.dataShopImg').hide();
+					$('.dataShopImg').remove();
 				}
 				toDownload();
 			}

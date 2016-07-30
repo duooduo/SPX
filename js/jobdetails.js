@@ -11,8 +11,8 @@
 		type: 'POST',
 		dataType: 'json',
 		// headers: {"Content-type": "application/json;charset=UTF-8"},
-		contentType: 'application/json;charset=UTF-8',
-		data: JSON.stringify(postJson),
+		// contentType: 'application/json;charset=UTF-8',
+		data: postJson,
 		success: function (d) {
 			console.log(d);
 			if(d.status == 1001){
@@ -28,7 +28,7 @@
 				$('.job_wage').html(data.salaryMin + '-' + data.salaryMax + '元/月');
 				$('.job_address').html(data.shopLocationName);
 
-				if(data.welfare && data.welfare != []){
+				if(data.welfare && data.welfare.length>0){
 					var welfareDom = '';
 					for(var i=0; i<data.welfare.length; i++){
 						var index = data.welfare[i];
@@ -36,7 +36,7 @@
 					}
 					$('.dataWelfare .job_tips').html(welfareDom);
 				}else {
-					$('.dataWelfare').hide();
+					$('.dataWelfare').remove();
 				}
 
 				if(data.education){

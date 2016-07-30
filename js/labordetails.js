@@ -11,8 +11,8 @@
 		type: 'POST',
 		dataType: 'json',
 		// headers: {"Content-type": "application/json;charset=UTF-8"},
-		contentType: 'application/json;charset=UTF-8',
-		data: JSON.stringify(postJson),
+		// contentType: 'application/json;charset=UTF-8',
+		data: postJson,
 		success: function (d) {
 			console.log(d);
 			if(d.status == 1001){
@@ -33,13 +33,13 @@
 				}
 
 				$('.dataPurpose').find('dl').eq(0).find('dd').html(data.purpose);
-				if(data.salaryMin == '' || data.salaryMax == ''){
+				if( !data.salaryMin || !data.salaryMax ){
 					$('.dataPurpose').find('dl').eq(1).find('dd').html('面议');
 				}else {
 					$('.dataPurpose').find('dl').eq(1).find('dd').html(data.salaryMin + '-' + data.salaryMax);
 				}
 
-				if(data.workHistory && data.workHistory != []){
+				if(data.workHistory && (data.workHistory.length > 0)){
 					var historyDom = '';
 					for(var i=0; i<data.workHistory.length; i++){
 						var index = data.workHistory[i];
@@ -53,10 +53,10 @@
 					}
 					$('.dataWorkHistory .p_tipsBox').html(historyDom);
 				}else {
-					$('.dataWorkHistory').hide();
+					$('.dataWorkHistory').remove();
 				}
 
-				if(data.workExperience && data.workExperience != []){
+				if(data.workExperience && data.workExperience.length>0){
 					var experienceDom = '';
 					for(var i=0; i<data.workExperience.length; i++){
 						var index = data.workExperience[i];
@@ -68,13 +68,13 @@
 					}
 					$('.dataWorkExperience .labor_list03').html(experienceDom);
 				}else {
-					$('.dataWorkExperience').hide();
+					$('.dataWorkExperience').remove();
 				}
 
 				if(data.specialty){
 					$('.labor_intro').html(data.specialty);
 				}else {
-					$('.dataSpecialty').hide();
+					$('.dataSpecialty').remove();
 				}
 
 				toDownload();
