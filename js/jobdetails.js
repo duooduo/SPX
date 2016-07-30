@@ -24,7 +24,7 @@
 				}
 				var date = new Date(data.createTime);
 				$('.job_time').html((date.getMonth()+1) + '月' + date.getDate() + '日'); //date.getFullYear()
-				$('.job_main').html(data.description);
+				$('.job_main').html(data.shopName);
 				$('.job_wage').html(data.salaryMin + '-' + data.salaryMax + '元/月');
 				$('.job_address').html(data.shopLocationName);
 
@@ -49,11 +49,11 @@
 					$('.dataWork .job_tips').append('<span>'+ data.ageMin +'-'+ data.ageMax +'岁</span>');
 				}
 
-				$('.dataWork .job_require').html(data.description); //todo?
+				$('.dataWork .job_require').html(data.description);
 
 				$('.job_bossInfo img').attr('src',data.icon);
 				$('.job_bossInfo .ovh').html('<b>'+ data.realName +'</b>/<b>'+ data.position +'</b>');
-				//$('.job_shopTxt').html(data.shopName); //todo???
+				$('.job_shopTxt').html(data.shopName);
 				$('.job_shopScope').html(data.shopScale);
 				$('.job_shopType').html(data.shopType);
 

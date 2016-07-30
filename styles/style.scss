@@ -24,16 +24,16 @@ $border: 1px solid #fcfcfc;
 .p_ml30 { margin-left: rem(30);}
 .p_tip { padding-top: rem(18);
 	span { display: inline-block; padding: 0 rem(8) 0 rem(35); position: relative; margin-right: rem(9); border: 1px solid #ffc65a; border-radius: rem(3); line-height: rem(26); font-size: rem(18); @extend %color_7;
-		&:before { content: ''; position: absolute; left: 0; top: 0; display: block; width: rem(26); height: rem(26); background-color: #ffc65a; @extend %icons; }
+		&:before { content: ''; position: absolute; left: -1px; top: 0; display: block; width: rem(26); height: rem(26); background-color: #ffc65a; border-radius: rem(3) 0 0 rem(3); @extend %icons; }
 		 //age1男, age2女
-		&.age1:before { background-position: 0 0;}
+		&.age1:before { background-position: rem(-140) 0;}
 		&.age2:before { background-position: 0 0;}
 		&.yer:before { background-position: rem(-30) 0;}
 		&.mrk:before { background-position: rem(-60) 0;}
 		&.edu:before { background-position: rem(-90) 0;}
 	}
 }
-.p_box02 { margin: rem(10) rem(12) 0; padding: rem(10) rem(20); background: #fff; border-radius: rem(10); position: relative;
+.p_box02 { margin: rem(40) rem(20) 0; padding: rem(10) rem(20); background: #fff; border-radius: rem(10); position: relative;
 	.p_boxMain { border-top: 1px solid #ddd; padding-top: rem(20); position: relative; overflow: hidden;}
 }
 .p_tit02 { height: rem(66); margin-top: rem(-10); line-height: rem(66); font-size: rem(28);}
