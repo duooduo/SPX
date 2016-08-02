@@ -7,6 +7,7 @@ $border: 1px solid #fcfcfc;
 %icons { background-image: url("../images/icons.png"); background-size: rem(200) rem(200);}
 
 // -- public
+.p-bodyfff { background: #fff;}
 .p_wrap { position: relative; max-width: 720px; margin: 0 auto; padding-bottom: rem(120); z-index: 1;}
 
 .p_topAd { position: relative; width: 100%; height: rem(120); z-index: 10;
@@ -157,4 +158,22 @@ $border: 1px solid #fcfcfc;
 	.rule_tit { padding: 0 0 10px 0; text-align: center; font-size: 18px; color: #252525;}
 	p { font-size: 16px; @extend %color_5; word-break: break-all;}
 	h2 { font-size: 16px; @extend %color_7; padding: 10px 0 5px;}
+}
+
+// -- app
+.app-btn { display: block; width: rem(300); height: rem(80); line-height: rem(80); background: #ffc65a; border-radius: rem(10); font-size: rem(36); color: #fff; text-align: center; -webkit-box-shadow: 0 rem(15) rem(10) 0 rgba(18, 17, 17, .3);box-shadow: 0 rem(15) rem(10) 0 rgba(18, 17, 17, .3);}
+
+.app-h { background: #3c3938; padding-top: rem(104); height: rem(510);
+	img { display: block; width: 100%; margin-bottom: rem(60);}
+	.app-btn { position: relative; left: 50%; margin-left: rem(-150);}
+}
+
+.app-m { padding-bottom: rem(180);
+	.app-mImg { padding: rem(50) 0; border-top: 1px solid #ddd;
+		&:first-of-type { border-top: 0;}
+	}
+	img { display: block; width: 100%;}
+}
+.app-bottom {position: fixed; left: 0; right: 0; bottom: 0; display: block; width: 100%; height: rem(130); padding-top: rem(50); z-index: 9; background: #3c3938; text-align: center;
+	.app-btn { display: inline-block;}
 }
