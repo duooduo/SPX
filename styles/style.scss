@@ -163,7 +163,7 @@ $border: 1px solid #fcfcfc;
 // -- app
 .app-btn { display: block; width: rem(300); height: rem(80); line-height: rem(80); background: #ffc65a; border-radius: rem(10); font-size: rem(36); color: #fff; text-align: center; -webkit-box-shadow: 0 rem(15) rem(10) 0 rgba(18, 17, 17, .3);box-shadow: 0 rem(15) rem(10) 0 rgba(18, 17, 17, .3);}
 
-.app-h { background: #3c3938; padding-top: rem(104); height: rem(510);
+.app-h { background: rgba(0,0,0,.6); padding-top: rem(104); height: rem(510);
 	img { display: block; width: 100%; margin-bottom: rem(60);}
 	.app-btn { position: relative; left: 50%; margin-left: rem(-150);}
 }
@@ -174,6 +174,6 @@ $border: 1px solid #fcfcfc;
 	}
 	img { display: block; width: 100%;}
 }
-.app-bottom {position: fixed; left: 0; right: 0; bottom: 0; display: block; width: 100%; height: rem(130); padding-top: rem(50); z-index: 9; background: #3c3938; text-align: center;
+.app-bottom {position: fixed; left: 0; right: 0; bottom: 0; display: block; width: 100%; height: rem(130); padding-top: rem(50); z-index: 9; background: rgba(0,0,0,.6);; text-align: center;
 	.app-btn { display: inline-block;}
 }
